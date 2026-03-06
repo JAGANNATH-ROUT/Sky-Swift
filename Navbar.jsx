@@ -27,11 +27,8 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 left-0 w-full z-50">
       <div className="flex items-center justify-between px-6 h-[80px]">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Sky Swift" className="w-[90px]" />
-          <span className="text-white text-sm md:text-base">
-            Sky Swift Limited
-          </span>
+        <Link to="/" className="flex items-center gap-5">
+          <img src={logo} alt="Sky Swift" className="w-[120px]" />
         </Link>
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
@@ -42,6 +39,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col gap-1.5"
@@ -76,6 +74,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;
